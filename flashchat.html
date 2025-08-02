@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study: Flash Chat App - Aditya Kamble</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style type="text/tailwindcss">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            @apply px-7 py-3 font-bold text-white bg-gradient-to-r from-pink-500 to-violet-500 rounded-full shadow-lg hover:from-pink-600 hover:to-violet-600 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-pink-300;
+        }
+        .tag {
+            @apply inline-block bg-slate-700 text-pink-400 text-sm font-semibold mr-2 mb-2 px-3 py-1 rounded-full;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="w-full top-0 z-50 bg-slate-900/80 backdrop-blur-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- <a href="/#projects" class="flex items-center gap-x-3 text-slate-300 hover:text-pink-400 transition-colors duration-300 font-medium text-lg">
+                    <i data-feather="arrow-left" class="w-6 h-6"></i>
+                    Back to All Projects
+                </a> -->
+                <a href="mailto:aaditya.kamble089@gmail.com" class="btn-primary px-5 py-2">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-20 md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <section id="project-title" class="text-center mb-16">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                    Flash Chat App
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+                    A real-time group chat application enabling instant messaging using Firebase.
+                </p>
+            </section>
+
+            <section id="project-showcase" class="mb-16">
+                 <!-- <img src="https://placehold.co/1200x675/1f1f38/ffcb5f?text=Flash+Chat+Screenshot" alt="A screenshot of the Flash Chat App" class="rounded-2xl w-full mx-auto shadow-2xl border-4 border-slate-800"> -->
+            </section>
+
+            <section id="project-details" class="grid md:grid-cols-3 gap-12" data-aos="fade-up" data-aos-delay="200">
+                
+                <div class="md:col-span-2 text-lg text-slate-300 space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-4"><span class="text-gradient">Project</span> Overview</h2>
+                        <p>Flash Chat is a modern messaging application that allows users to sign up, log in, and communicate in a shared chat room in real-time. The project's purpose was to demonstrate a full-stack mobile application, handling everything from user authentication to a live database connection for instant message updates. The interface is clean, featuring message bubbles and a smooth, auto-scrolling message list.</p>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-4"><span class="text-gradient">Challenges</span> & Solutions</h2>
+                        <p>The core challenge was implementing a real-time, bidirectional data flow for messages. A traditional REST API would be inefficient. I overcame this by integrating Firebase Firestore, which provides real-time listeners. I used a `StreamBuilder` widget in Flutter to subscribe to the messages collection in Firestore. This widget automatically listens for changes and rebuilds the UI instantly whenever a new message is added to the database, creating a seamless, real-time chat experience for all users.</p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 space-y-8">
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                        <h3 class="text-2xl font-bold text-white mb-4">Tech Stack</h3>
+                        <div class="flex flex-wrap">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Firestore</span>
+                            <span class="tag">Firebase Auth</span>
+                            <span class="tag">StreamBuilder</span>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                        <h3 class="text-2xl font-bold text-white mb-4">Project Links</h3>
+                         <a href="https://github.com/aditya989-max" class="flex items-center gap-x-3 text-lg font-semibold text-pink-400 hover:text-pink-300 transition-colors mb-3">
+                            <i data-feather="github" class="w-6 h-6"></i>
+                            View on GitHub
+                        </a>
+                        <a href="#" class="flex items-center gap-x-3 text-lg font-semibold text-pink-400 hover:text-pink-300 transition-colors">
+                            <i data-feather="play-circle" class="w-6 h-6"></i>
+                            Live Demo / Video
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900/30 mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <p class="text-center text-slate-400">&copy; 2025 Aditya Kamble. Crafted with passion.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        feather.replace();
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
+</body>
+</html>
